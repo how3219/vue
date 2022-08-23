@@ -16,7 +16,6 @@ export default function useTodos() {
         newTodo.value = '';
     };
     const changeTodo = (todo) => {
-        console.log(todo);
         store.commit('CHANGE_TODO', todo);
     };
     const removeTodo = (id) => {
