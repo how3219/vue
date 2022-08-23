@@ -1,0 +1,20 @@
+<template>
+    <div class="home">
+        <p>훌륭한 사람보다는 구석이 있는 사람이 되는 것.</p>
+        <a htef="http://jhc9639.blog.me" target="_blank" rel="큰돌의 터전">
+            <img src="../assets/logo.png" alt="로고" />
+        </a>
+    </div>
+</template>
+<script>
+export default {
+    // eslint-disable-next-line vue/multi-word-component-names
+    name: 'Home',
+};
+</script>
+<style scoped>
+.home {
+    margin: 0 auto;
+    text-align: center;
+}
+</style>
