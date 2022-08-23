@@ -16,16 +16,17 @@ export default function useTodos() {
         newTodo.value = '';
     };
     const changeTodo = (todo) => {
+        console.log(todo);
         store.commit('CHANGE_TODO', todo);
     };
-    const removeToDo = (id) => {
+    const removeTodo = (id) => {
         store.dispatch('REMOVE_TODO', id);
     };
     return {
         addTodo,
         newTodo,
         changeTodo,
-        removeToDo,
+        removeTodo,
         todos,
     };
 }

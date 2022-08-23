@@ -23,6 +23,7 @@ export default createStore({
         },
         CHANGE_TODO(state, payload) {
             const id = payload.id;
+            console.log(payload.id);
             const index = state.todos.findIndex((todo) => todo.id === id);
             state.todos[index] = payload;
             localStorage.setItem('todo', JSON.stringify(state.todos));

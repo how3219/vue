@@ -7,7 +7,7 @@
         <div class="input-box">
             <input type="text" v-model="newTodo" v-on:keyup.enter="addTodo" />
         </div>
-        <!-- <p class="title-desc">{{ todos.length }}개가 남다.</p> -->
+        <p class="title-desc">{{ todos.length }}개가 남다.</p>
         <ul>
             <Card v-for="todo in todos" :key="todo.id" :todo="todo" @delete="removeTodo" @change="changeTodo" />
         </ul>
@@ -32,7 +32,6 @@ export default {
             setSaying();
         });
         const today = getDate();
-        console.log(todos);
         return {
             todos,
             addTodo,

@@ -22,7 +22,7 @@ export default {
         const done = computed(() => props.todo.done);
         return {
             done,
-            toggoleTodo: () => {
+            toggleTodo: () => {
                 const value = {
                     ...props.todo,
                     done: !props.todo.done,
