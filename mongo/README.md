@@ -40,3 +40,11 @@
 -   데이터 베이스 사용 - use logsystem
 -   컬렉션 삭제 - use logsystem / db.log.drop()
 -   컬렉션 확인 - db.log.find().pretty()
+
+##### MongoDB Index
+
+---
+
+-   MongoDB 인덱스도 B-tree 자료구조를 사용
+-   인덱스를 컴퓨터 메모리에 올려서 구현하기 때문에 많은 인덱스를 설정하면 메모리 점유율이 높아지고 이로인해 메모리 스왑현상이 많이 일어나서
+    서버 처리 성능에 과부화를 줄수 있음. 그러므로 db.collection.totalIndexSize()를 통해 인덱스 사이즈 확인하며 처리하는것이 좋음
