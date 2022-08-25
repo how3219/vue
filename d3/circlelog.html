@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <title>D3 - CircleLog</title>
+        <style>
+            circle {
+                fill: #41b883;
+                stroke: #34495e;
+            }
+
+            svg {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <svg></svg>
+    </body>
+    <script>
+        const data = [0, 50, 100];
+        const svg = d3.select('svg');
+        const log = console.log;
+        log(svg.selectAll('circle'));
+        log(svg.selectAll('circle').data(data));
+        log(svg.selectAll('circle').data(data).enter());
+        log(svg.selectAll('circle').data(data).enter().append('circle'));
+    </script>
+</html>

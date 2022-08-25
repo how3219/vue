@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <title>circle And transition</title>
+        <style>
+            circle {
+                fill: #41b883;
+                stroke: #34495e;
+            }
+
+            svg {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <svg></svg>
+    </body>
+    <script>
+        const margin = {
+            left: 50,
+            right: 50,
+        };
+        const data = [0, 50, 100];
+        const width = 400;
+        const xScale = d3
+            .scaleLinear()
+            .domain([d3.min(data), d3.max(data)])
+            .range([0 + margin.left, width + margin.right]);
+        const svg = d3.select('svg');
+        const log = console.log;
+        const first = () => {
+            svg.selectAll('circle')
+                .data(data)
+                .enter()
+                .append('circle')
+                .attr('cx', (d) => xScale(d))
+                .attr('cy', 70)
+                .attr('r', 40);
+            const t = d3.transition().delay(500).duration(500).ease(d3.easeLinear);
+            d3.selectAll('circle').transition(t).style('fill', '#34495E');
+        };
+        first();
+    </script>
+</html>
