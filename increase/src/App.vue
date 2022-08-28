@@ -42,6 +42,7 @@ export default {
 
             function arcTween(pie) {
                 return function (d) {
+                    console.log(pie, d);
                     const start = pie[0].startAngle;
                     const end = pie[0].endAngle;
                     const value = pie[0].value;
